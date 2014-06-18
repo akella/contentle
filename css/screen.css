@@ -81,5 +81,12 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color:
 .search .search__input input { font-size: 14px; color: gray; text-align: left; line-height: 28px; box-shadow: inset 0 3px 2px #ececec; background: none; background: transparent; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 10px; position: relative; padding-left: 10px; position: absolute; left: 0; right: 0; top: 0; vertical-align: top; }
 .search .search__input .search__delete { position: absolute; right: 5px; top: 6px; cursor: pointer; background: url('../img/icons-s5eb3493e6c.png') 0 -532px no-repeat; width: 16px; height: 16px; }
 .search .search__input .search__delete:hover { background: url('../img/icons-s5eb3493e6c.png') 0 -506px no-repeat; width: 16px; height: 16px; }
+.search:hover .search__autocomplete { display: block; }
+.search .search__autocomplete { box-shadow: inset 0 3px 2px #ececec; position: absolute; right: 48px; left: -1px; top: 29px; border: 1px solid #939393; border-top: none; background: white; }
+.search .search__autocomplete ul { list-style: none; font-size: 14px; color: #515050; }
+.search .search__autocomplete ul li { padding: 4px 8px; cursor: pointer; }
+.search .search__autocomplete ul li:hover { background: #d01c4a; color: white; }
+.search .search__autocomplete ul li:hover strong { color: white; }
+.search .search__autocomplete ul li strong { display: inline-block; width: 31px; color: #3e3e3e; font-weight: bold; }
 
 .sidebar { position: fixed; top: 63px; left: 12px; width: 122px; box-shadow: 0 0 4px 1px #acacac; background: white; }
