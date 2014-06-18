@@ -47,6 +47,9 @@
 		&:hover
 			i
 				opacity: 1 
+	&.is-notlogged
+		.header__logo
+			border-right: none 
 	.header__logo
 		float: left
 		padding: 8px 15px 0 8px
@@ -55,6 +58,8 @@
 		border-right: 1px solid #D1D1D1 
 		cursor: pointer
 		position: relative
+		&.is-notlogged
+			border-right: none 
 		+r(768)
 			padding-right: 8px 
 		&.is-active
