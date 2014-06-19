@@ -41,7 +41,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color:
 .header .header__logo:hover:before { content: " "; position: absolute; bottom: -3px; left: 0; width: 100%; height: 3px; background: #ba0611; }
 .header .header__logo .header__logopic { background: url('../img/icons-sed674525e4.png') 0 -194px no-repeat; width: 34px; height: 34px; display: inline-block; }
 .header .header__logo .header__logotext { display: inline-block; background: url('../img/icons-sed674525e4.png') 0 0 no-repeat; width: 166px; height: 34px; }
-@media screen and (max-width: 768px) { .header .header__logo .header__logotext { display: none; } }
+@media screen and (max-width: 767px) { .header .header__logo .header__logotext { display: none; } }
 .header .header__rss { padding: 8px 8px 0 8px; height: 42px; }
 .header .header__rss i { background: url('../img/icons-sed674525e4.png') 0 -282px no-repeat; width: 34px; height: 34px; display: inline-block; }
 .header .header__rss:hover i, .header .header__rss.is-active i { background: url('../img/icons-sed674525e4.png') 0 -238px no-repeat; width: 34px; height: 34px; }
