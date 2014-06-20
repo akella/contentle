@@ -1,0 +1,297 @@
+// BEGIN TOOLBAR
+.toolbar
+	margin: 64px 12px 0px 152px
+	background: #FFFFFF
+	box-shadow: 0 3px 5px rgba(0,0,0,.37)
+	+clr
+	position: relative
+	z-index: 10 
+	&.not-logged
+		margin: 144px 12px 0px 152px 
+	
+	.search
+		top: 8px
+		left: 8px 
+		float: left
+		
+	.search__input
+		width: 157px
+		
+	.icon
+		float: right
+		height: 46px
+		width: 46px
+		line-height: 46px
+		text-align: center  
+		position: relative
+		cursor: pointer
+		vertical-align: top
+		i
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: -1px
+		&:hover
+			background: #F3F3F3 
+		&.is-active
+			&:before
+				content: ' '
+				position: absolute
+				top: 0 
+				left: 0
+				width: 100%
+				height: 3px   
+				background: #bc0000
+	
+	.icon_listview
+		i
+			+s(listview)
+		&:hover, &.is-active
+			i
+				+s(listview-active)
+		
+	.icon_gridview
+		margin-right: 5px 
+		i
+			+s(gridview)
+		&:hover, &.is-active
+			i
+				+s(gridview-active)
+
+	.icon_combosort
+		margin-right: 3px
+		text-align: right 
+		i
+			+s(arrow-up)
+			position: relative
+			right: 6px 
+		&.arrow-down
+			i
+				+s(arrow-down)
+
+	.icon_refresh
+		margin-left: 18px 
+		border-left: 1px solid #d1d1d1
+		+g(#fdfdfd, #f3f2f3)
+		i	
+			+s(refresh)
+		&:hover, &.is-active
+			i
+				+s(refreshh)
+
+	.combosort
+		float: right
+		font-size: 0
+		height: 46px 
+		line-height: 46px
+		margin-right: 11px 
+
+	.combosort__option
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px
+		line-height: 23px
+		padding-left: 5px
+		padding-right: 25px   
+		border: 1px solid #969696
+		width: 90px
+		-ms-text-overflow: ellipsis 
+		text-overflow: ellipsis
+		overflow: hidden
+		position: relative
+		&:hover
+			border: 1px solid #696969
+		select
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 5
+			opacity: 0
+			option
+				color: #4d4d4d 
+				
+
+
+	.combosort__btn
+		float: right
+		width: 18px 
+		height: 23px
+		background: #eaeaea
+		border-left: 1px solid #969696 
+		vertical-align: middle
+		text-align: center
+		position: absolute
+		top: 0
+		right: 0 
+		cursor: pointer
+		i
+			display: block
+			position: relative
+			top: 9px
+			left: 4px
+			+s(combosort)
+
+	.combosort:hover
+		.combosort__option
+			border: 1px solid #696969
+			color: #1a1a1a
+		.combosort__btn
+			border-left: 1px solid #696969
+			i
+				+s(combosorth)
+		
+// BEGIN USERSTREAM
+.userstream
+	margin: 14px 12px 0px 152px
+	+clr
+	
+.userstream__col
+	float: left
+	margin-right: 12px 
+
+.userstream__block
+	background: #FFF
+	box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81)
+	width: 202px
+	position: relative
+	margin-bottom: 9px
+	&:hover
+		.userstream__btn
+			display: block
+
+.userstream__btn
+	position: absolute
+	top: 11px
+	left: 6px
+	padding: 5px 8px
+	font: bold 12px/1 Tahoma 
+	background: rgba(255,255,255,0.9)
+	border: 1px solid rgba(210,210,210,0.9)
+	-webkit-border-radius: 3px 
+	border-radius: 3px
+	cursor: pointer
+	display: none
+	&:hover
+		color: #9a0000 
+	
+
+.userstream__image
+	font-size: 0 
+	padding: 1px
+	max-height: 400px
+	min-height: 130px 
+	overflow: hidden 
+
+.userstream__description
+	padding: 10px
+	font: 12px/1.3 Tahoma
+		 
+.userstream__collection-name
+	background: #eeeeee
+	border-top: 1px solid #C8C8C8
+	+clr
+	img
+		display: block
+		float: left
+		padding: 2px
+		margin-right: 7px 
+		width: 40px
+		height: 40px
+	h3
+		font: bold 12px Tahoma
+		padding: 7px
+		
+// BEGIN STREAM
+.stream
+	margin: 0 12px 0 152px
+	background: #f2f2f2
+	-webkit-box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81) 
+	box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81) 
+	+clr
+	position: relative
+	z-index: 1
+	
+.stream__list
+	padding: 4px
+
+.stream__list-item
+	border-bottom: 1px solid #c8c8c8
+	+clr
+
+	.type
+		float: left
+		height: 31px
+		width: 31px
+		line-height: 31px
+		margin-right: 6px 
+		text-align: center  
+		position: relative
+		vertical-align: top
+		i
+			display: inline-block
+			position: relative
+			top: 0
+
+	.type_quote
+		i
+			+s(icon-quote)
+	.type_picture
+		i
+			top: 3px
+			+s(icon-picture)
+	.type_video
+		i
+			+s(icon-video)
+	.type_site
+		i
+			top: 3px
+			+s(icon-site)
+
+	.source
+		float: left
+		width: 17.386091%
+		margin-right: 5px
+		font: bold 12px/31px Tahoma
+		position: relative
+		
+		.favicon
+			height: 16px
+			width: 16px
+			position: relative
+			top: 3px
+			margin-right: 5px 
+	
+	.privacy
+		float: left
+		height: 31px
+		width: 14px 
+		line-height: 31px
+		margin-right: 5px 
+		text-align: center 
+		vertical-align: top
+		i
+			display: inline-block
+			position: relative
+			top: 3px
+	
+	.privacy_locked
+		i
+			+s(icon-private)
+	
+	.title
+		float: left
+		font: 12px/31px Tahoma
+		margin-right: 5px 
+		position: relative
+
+	.date
+		float: right
+		font: 12px/31px Tahoma
+		margin-right: 10px 
+	
+	.collection-name
+		float: right
+		font:  bold 12px/31px Tahoma
+		width: 20.383693% 
+		margin-right: 5px
