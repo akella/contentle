@@ -153,12 +153,12 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color:
 
 .content-wrap { margin: 64px auto 0 auto; min-width: 600px; position: relative; width: 1880px; }
 .content-wrap.not-logged { margin-top: 144px; }
-@media only screen and (max-width: 1896px) { .content-wrap { width: 1666px; } }
-@media only screen and (max-width: 1682px) { .content-wrap { width: 1452px; } }
-@media only screen and (max-width: 1468px) { .content-wrap { width: 1238px; } }
-@media only screen and (max-width: 1254px) { .content-wrap { width: 1024px; } }
-@media only screen and (max-width: 1040px) { .content-wrap { width: 810px; } }
-@media only screen and (max-width: 826px) { .content-wrap { width: 596px; } }
+@media only screen and (max-width: 1896px) { .content-wrap { width: 1652px; } }
+@media only screen and (max-width: 1682px) { .content-wrap { width: 1438px; } }
+@media only screen and (max-width: 1468px) { .content-wrap { width: 1224px; } }
+@media only screen and (max-width: 1254px) { .content-wrap { width: 1010px; } }
+@media only screen and (max-width: 1040px) { .content-wrap { width: 796px; } }
+@media only screen and (max-width: 826px) { .content-wrap { width: 582px; } }
 
 .content-layout { position: absolute; left: 152px; right: 0; }
 
@@ -211,7 +211,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color:
 .userstream { position: absolute; top: 60px; left: 0; right: 0; *zoom: 1; }
 .userstream:after { content: " "; display: table; clear: both; }
 
-.userstream__block { float: left; margin-right: 12px; margin-bottom: 9px; background: white; box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81); width: 202px; position: relative; }
+.userstream__block { float: left; margin-bottom: 9px; background: white; box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81); width: 202px; position: relative; }
 .userstream__block:hover .userstream__btns { display: block; }
 
 .userstream__btns { position: absolute; top: 11px; left: 6px; display: none; }
