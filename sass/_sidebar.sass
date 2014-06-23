@@ -1,14 +1,18 @@
 $border: #4D4D4D
 
 .sidebar
-	position: fixed
-	top: 63px 
-	left: 12px 
+	position: absolute
+	top: 0
+	left: 12px
 	width: 122px 
+	// position: fixed
+	// top: 63px 
+	// left: 12px 
+	// width: 122px 
 	
-.not-logged
-	.sidebar
-		top: 143px
+// .not-logged
+// 	.sidebar
+// 		top: 143px
 
 .sidebar__block
 	box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81)
@@ -70,7 +74,6 @@ $border: #4D4D4D
 					width: 3px
 					height: 100%  
 					background: #bc0000
-					z-index: 2 
 				
 	.user-pic
 		padding: 1px
@@ -90,7 +93,7 @@ $border: #4D4D4D
 			position: relative
 			font: bold 12px/38px Tahoma
 			border-bottom: 1px solid #dbdbdb
-			&:hover
+			&:hover, &.is-selected
 				border-top: none
 				
 		span
@@ -112,8 +115,9 @@ $border: #4D4D4D
 		padding: 0 9px
 		position: relative
 		bottom: 6px
+		+g(#fafafa, #eaeaea)
 		&:hover
-			+g(#fafafa, #eaeaea)
+			+g(#fff 50%, #d9d9d9)
 
 	.collection
 		padding: 14px 6px 10px 10px

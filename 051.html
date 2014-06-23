@@ -78,9 +78,9 @@
 	<!-- end header__right -->
 </div>
 <!-- end header -->
-
-<!-- begin sidebar  -->
-<div class="sidebar">
+<div class="content-wrap">
+	<!-- begin sidebar  -->
+	<div class="sidebar">
 	<!-- begin tags  -->
 	<div class="sidebar__block">
 		<div class="title title_tags">
@@ -109,133 +109,137 @@
 		</ul>
 	</div>
 	<!-- end filters -->
-</div>
-<!-- begin toolbar -->
-<div class="toolbar">
-	<div class="search">
-		<div class="search__tag">Tx</div>
-		<div class="search__input">
-			<input class="" placeholder="Text filter...">
-			<div class="search__delete"></div>
+	</div>
+	<div class="content-layout">
+		<!-- begin toolbar -->
+		<div class="toolbar">
+		<div class="search">
+			<div class="search__tag">Tx</div>
+			<div class="search__input">
+				<input class="" placeholder="Text filter...">
+				<div class="search__delete"></div>
+			</div>
+			<div class="search__submit"><i></i></div>
+			<div class="search__autocomplete" hidden>
+				<ul>
+					<li><strong>#</strong>Tag search</li>
+					<li><strong>Tx</strong>Tag search</li>
+				</ul>
+			</div>
 		</div>
-		<div class="search__submit"><i></i></div>
-		<div class="search__autocomplete" hidden>
-			<ul>
-				<li><strong>#</strong>Tag search</li>
-				<li><strong>Tx</strong>Tag search</li>
-			</ul>
+		<div class="icon icon_refresh"><i></i></div>
+		<div class="icon icon_gridview is-active"><i></i></div>
+		<div class="icon icon_listview"><i></i></div>
+		<div class="combosort">
+			<div class="combosort__option">
+				<span id="combosort__value">TimeCreated</span>
+				<ul class="combosort__drop">
+					<li>TimeCreated</li>
+					<li>TimeCreated</li>
+					<li>TimeCreated</li>
+				</ul>
+				<div class="combosort__btn"><i></i></div>
+			</div>
+		</div>
+		<div class="icon icon_combosort arrow-down"><i></i></div>
+		</div>
+		<!-- begin stream -->
+		<div class="stream">
+		<table>
+			<tr>
+				<td class="type type_quote"><i></i></td>
+				<td class="source"><img src="img/fav-imart.png" class="favicon">imart.ua</td>
+				<td class="privacy privacy_locked"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns stream__btns_privacy-locked">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="type type_picture"><i></i></td>
+				<td class="source"><img src="img/fav-fb.png" class="favicon">facebook.com</td>
+				<td class="privacy"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="type type_video"><i></i></td>
+				<td class="source"><img src="img/fav-albomio.png" class="favicon">albomio.com</td>
+				<td class="privacy privacy_locked"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns stream__btns_privacy-locked">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="type type_site"><i></i></td>
+				<td class="source"><img src="img/fav-trello.png" class="favicon">trello.com</td>
+				<td class="privacy privacy_locked"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns stream__btns_privacy-locked">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="type type_quote"><i></i></td>
+				<td class="source"></td>
+				<td class="privacy"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="type type_quote"><i></i></td>
+				<td class="source"><img src="img/fav-fb.png" class="favicon">facebook.com</td>
+				<td class="privacy"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="type type_picture"><i></i></td>
+				<td class="source"><img src="img/fav-imart.png" class="favicon">imart.ua</td>
+				<td class="privacy"><i></i></td>
+				<td class="title">Title of the fragment</td>
+				<td class="collection-name">Collection name</td>
+				<td class="date">01.10.2013</td>
+				<td colspan=2 class="stream__btns">
+					<button class="btn">Staple It</button>
+					<button class="btn btn_link">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</td>
+			</tr>
+		</table>
 		</div>
 	</div>
-	<div class="icon icon_refresh"><i></i></div>
-	<div class="icon icon_gridview is-active"><i></i></div>
-	<div class="icon icon_listview"><i></i></div>
-	<div class="combosort">
-		<div class="combosort__option">
-			<span id="combosort__value">TimeCreated</span>
-			<select name="" id="">
-				<option>TimeCreated</option>
-				<option>TimeCreated</option>
-			</select>
-			<div class="combosort__btn"><i></i></div>
-		</div>
-	</div>
-	<div class="icon icon_combosort arrow-down"><i></i></div>
-</div>
-<!-- begin stream -->
-<div class="stream">
-	<table>
-		<tr>
-			<td class="type type_quote"><i></i></td>
-			<td class="source"><img src="img/fav-imart.png" class="favicon">imart.ua</td>
-			<td class="privacy privacy_locked"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns stream__btns_privacy-locked">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-		<tr>
-			<td class="type type_picture"><i></i></td>
-			<td class="source"><img src="img/fav-fb.png" class="favicon">facebook.com</td>
-			<td class="privacy"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-		<tr>
-			<td class="type type_video"><i></i></td>
-			<td class="source"><img src="img/fav-albomio.png" class="favicon">albomio.com</td>
-			<td class="privacy privacy_locked"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns stream__btns_privacy-locked">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-		<tr>
-			<td class="type type_site"><i></i></td>
-			<td class="source"><img src="img/fav-trello.png" class="favicon">trello.com</td>
-			<td class="privacy privacy_locked"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns stream__btns_privacy-locked">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-		<tr>
-			<td class="type type_quote"><i></i></td>
-			<td class="source"></td>
-			<td class="privacy"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-		<tr>
-			<td class="type type_quote"><i></i></td>
-			<td class="source"><img src="img/fav-fb.png" class="favicon">facebook.com</td>
-			<td class="privacy"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-		<tr>
-			<td class="type type_picture"><i></i></td>
-			<td class="source"><img src="img/fav-imart.png" class="favicon">imart.ua</td>
-			<td class="privacy"><i></i></td>
-			<td class="title">Title of the fragment</td>
-			<td class="collection-name">Collection name</td>
-			<td class="date">01.10.2013</td>
-			<td colspan=2 class="stream__btns">
-				<button class="btn">Staple It</button>
-				<button class="btn btn_link">Link</button>
-				<button class="btn btn_edit">Edit</button>
-			</td>
-		</tr>
-	</table>
 </div>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
