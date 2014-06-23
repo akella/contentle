@@ -2,7 +2,6 @@
 	height: 50px 
 	border-right: 1px solid #D1D1D1 
 	position: relative
-	
 	cursor: pointer
 	float: left
 	vertical-align: top
@@ -24,6 +23,7 @@
 	background: #FFFFFF
 	box-shadow: 0 3px 5px rgba(0,0,0,.37)
 	position: fixed
+	z-index: 20 
 	top: 0
 	left: 0
 	right: 0
@@ -58,6 +58,7 @@
 		border-right: 1px solid #D1D1D1 
 		cursor: pointer
 		position: relative
+		z-index: 20 
 		&.is-notlogged
 			border-right: none 
 		+r(767)
@@ -358,9 +359,11 @@
 	width: 724px 
 	top: 50px
 	height: 77px    
-	background: #FFF8B4 
+	background: #FFF8B4
+	z-index: 15 
 	//border: 1px solid #C7BF8D 
-	border-top: none 
+	// border-top: none
+	
 	
 	.login__left
 		float: left

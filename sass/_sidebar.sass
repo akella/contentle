@@ -1,8 +1,7 @@
 $border: #4D4D4D
 
 .sidebar
-	// position: fixed
-	position: absolute
+	position: fixed
 	top: 63px 
 	left: 12px 
 	width: 122px 
@@ -66,14 +65,12 @@ $border: #4D4D4D
 				&:before
 					content: " "
 					position: absolute
-					top: -1px
+					top: 0
 					left: 0
 					width: 3px
-					height: 40px    
+					height: 100%  
 					background: #bc0000
-	// .list_filters
-	// 	li a:hover:before
-	// 		display: none 
+					z-index: 2 
 				
 	.user-pic
 		padding: 1px

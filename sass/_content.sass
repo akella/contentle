@@ -1,13 +1,15 @@
 // BEGIN TOOLBAR
 .toolbar
-	margin: 64px 12px 0px 152px
 	background: #FFFFFF
 	box-shadow: 0 3px 5px rgba(0,0,0,.37)
 	+clr
-	position: relative
+	position: fixed
+	top: 64px
+	left: 152px
+	right: 12px
 	z-index: 10 
 	&.not-logged
-		margin: 144px 12px 0px 152px 
+		top: 144px
 	
 	.search
 		top: 8px
@@ -143,8 +145,15 @@
 		
 // BEGIN USERSTREAM
 .userstream
-	margin: 14px 12px 0px 152px
+	position: absolute
+	top: 124px
+	left: 152px 
+	right: 12px
+	margin-right: -12px 
 	+clr
+
+.userstream_not-logged
+	top: 204px
 	
 .userstream__col
 	float: left
@@ -170,7 +179,6 @@
 	border: 1px solid rgba(210,210,210,0.9)
 	-webkit-border-radius: 3px 
 	border-radius: 3px
-	cursor: pointer
 	display: none
 	&:hover
 		color: #9a0000 
@@ -204,34 +212,47 @@
 		
 // BEGIN STREAM
 .stream
-	margin: 0 12px 0 152px
+	margin: 110px 12px 0 152px
 	background: #f2f2f2
 	-webkit-box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81) 
 	box-shadow: 0 1px 4px 1px rgba(84, 84, 84, 0.81) 
-	+clr
-	position: relative
-	z-index: 1
-	
-.stream__list
 	padding: 4px
-
-.stream__list-item
-	border-bottom: 1px solid #c8c8c8
-	+clr
+	table
+		width: 100%
+	td:first-child
+		position: relative
+		&:before
+			content: " "
+			position: absolute
+			top: -1px
+			left: -4px
+			width: 3px
+			height: 100% 
+			background: #bd0000 
+			border-bottom: 2px solid #bd0000
+			display: none
+	tr
+		td
+			border-bottom: 1px solid #c8c8c8		
+		&:hover
+			+g(#e5e4e4, #dadbda)
+			td:first-child:before
+				display: block
+			.collection-name, .date
+				display: none
+			.stream__btns 
+				display: table-cell
 
 	.type
-		float: left
-		height: 31px
-		width: 31px
+		min-width: 31px //3.71702637%
 		line-height: 31px
-		margin-right: 6px 
+		padding-right: 6px 
 		text-align: center  
 		position: relative
 		vertical-align: top
 		i
 			display: inline-block
 			position: relative
-			top: 0
 
 	.type_quote
 		i
@@ -249,11 +270,9 @@
 			+s(icon-site)
 
 	.source
-		float: left
-		width: 17.386091%
-		margin-right: 5px
+		width: 17.9856115% //150px
+		padding-right: 5px
 		font: bold 12px/31px Tahoma
-		position: relative
 		
 		.favicon
 			height: 16px
@@ -263,11 +282,9 @@
 			margin-right: 5px 
 	
 	.privacy
-		float: left
-		height: 31px
-		width: 14px 
+		min-width: 14px //1.67865707434053% 14px 
 		line-height: 31px
-		margin-right: 5px 
+		padding-right: 5px 
 		text-align: center 
 		vertical-align: top
 		i
@@ -280,18 +297,50 @@
 			+s(icon-private)
 	
 	.title
-		float: left
 		font: 12px/31px Tahoma
-		margin-right: 5px 
-		position: relative
+		padding-right: 5px
+		width: 45.08393285% // 376px/834px 
 
-	.date
-		float: right
-		font: 12px/31px Tahoma
-		margin-right: 10px 
-	
 	.collection-name
-		float: right
 		font:  bold 12px/31px Tahoma
 		width: 20.383693% 
-		margin-right: 5px
+		padding-right: 5px
+
+	.date
+		font: 12px/31px Tahoma
+		padding-right: 10px
+		width: 7.91%
+		position: relative
+		
+.stream__btns
+	text-align: right
+	padding-right: 134px
+	border: none 
+	font-size: 0
+	white-space: nowrap 
+	display: none
+		
+	.btn, .btn_link
+		color: #4D4D4D 
+		font: bold 12px/23px Tahoma
+		+g(#fbf9f9, #f2f0f0)
+		border: 1px solid #c8c8c8
+		-webkit-border-radius: 3px 
+		border-radius: 3px 
+		-webkit-box-shadow: 0 0 0 1px #FFF inset 
+		box-shadow: 0 0 0 1px #FFF inset
+		padding: 0 10px
+		margin-left: 5px
+		&:hover
+			color: #9a0000
+		
+	.btn_edit
+		padding: 0 20px
+		
+	.btn_link, .btn_edit
+		display: none
+ 
+.stream__btns_privacy-locked
+	padding-right: 11px
+	.btn_link, .btn_edit
+		display: inline-block
