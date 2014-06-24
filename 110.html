@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- begin header  -->
-<div class="header is-notlogged">
+<div class="header">
 	<!-- begin header__left -->
 	<div class="header__left">
 		<div class="header__arrow">
@@ -18,6 +18,12 @@
 		<div class="header__logo">
 			<i class="header__logopic"></i>
 			<i class="header__logotext"></i>
+		</div>
+		<div class="header__rss">
+			<i class="header__rssicon"></i>
+		</div>
+		<div class="header__stream">
+			<i class="header__streamicon"></i>
 		</div>
 	</div>
 	<!-- end header left -->
@@ -31,56 +37,86 @@
 				<div class="search__delete"></div>
 			</div>
 			<div class="search__submit"><i></i></div>
-			<div class="search__autocomplete" hidden>
+			<div class="search__autocomplete">
 				<ul>
 					<li><strong>#</strong>Tag search</li>
 					<li><strong>Tx</strong>Tag search</li>
 				</ul>
 			</div>
 		</div>
-		<ul class="usermenu">
-			<li class="usermenu__lang"><a href="#"><i></i>English</a></li>
-			<li><a href="#">About</a></li>
-		</ul>
+		<div class="header__premium">Go Premium</div>
+		<div class="header__add">
+			<i class="header__addicon"></i>
+		</div>
+		<div class="header__invites">
+			<i class="header__invitesicon"></i>
+		</div>
+		<div class="header__settings">
+			<i class="header__settingsicon"></i>
+			<div class="header__drop">
+				<ul>
+					<li><a href="#">Collections</a></li>
+					<li><a href="#">Fragments</a></li>
+					<li><a href="#">Feed</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Premium account</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Tools</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<!-- end header__right -->
-
-	<!-- begin login  -->
-	<div class="login">
-		<div class="login__left">
-			<div class="login__label">Login with:</div>
-			<a class="login__fb"></a>
-			<a class="login__gp"></a>
-			<a class="login__vk"></a>
-		</div>
-		<div class="login__right">
-			<div class="login__signup">Sign Up</div>
-			<div class="login__login">Login</div>
-		</div>
-	</div>
-	<!-- end login -->
 </div>
 <!-- end header -->
-<div class="content-wrap not-logged">
-<!-- begin sidebar  -->
+<div class="content-wrap">
+	<!-- begin sidebar  -->
 	<div class="sidebar">
-		<!-- begin tags  -->
+		<!-- begin commands -->
 		<div class="sidebar__block">
-			<div class="title title_tags">
-				<i></i>Tags
+			<div class="user-pic">
+				<img src="img/sidebar-userpic.jpg" alt="">
 			</div>
-			<ul class="list list_tags">
-				<li><a href="#">the tag name</a></li>
-				<li><a href="#">the tag name</a></li>
-				<li><a class="is-selected" href="#">selected tad</a></li>
-				<li><a href="#">the tag name</a></li>
-				<li><a href="#">the tag name</a></li>
+			<div class="user-name">
+				User first and last name
+			</div>
+			<div class="collection">
+				<div class="icon-lock"><i></i></div>
+				<h3>This is a collection name</h3>
+				<span class="collection__stats"><b>1212</b> Followers</span>
+				<span class="collection__stats"><b>332</b> Fragments</span>
+				<p class="collection__description">This is Album description. This is a description descripton the description</p>
+			</div>
+			<a href="#" class="edit edit_collection">Edit Collection</a>
+		</div>
+		<!-- end commands -->
+
+		<!-- begin filters -->
+		<div class="sidebar__block">
+			<div class="title title_filters">
+				<i></i>Filters
+			</div>
+			<ul class="list list_filters">
+				<li><a href="#">text-filer</a></li>
+				<li><a href="#">text-filer</a></li>
+				<li><a class="is-selected" href="#">selected filer</a></li>
+				<li><a href="#">text-filer</a></li>
+				<li><a href="#">text-filer</a></li>
 			</ul>
 		</div>
-		<!-- end tags -->
+		<!-- end filters -->
 	</div>
-	<!-- begin toolbar -->
+	<!-- end sidebar -->
 	<div class="content-layout">
+		<!-- begin toolbar -->
 		<div class="toolbar">
 			<div class="search">
 				<div class="search__tag">Tx</div>
@@ -98,12 +134,29 @@
 			</div>
 			<div class="icon icon_gridview is-active"><i></i></div>
 			<div class="icon icon_listview"><i></i></div>
+			<div class="icon icon_docview"><i></i></div>
+			<div class="icon icon_playerview"><i></i></div>
+			<div class="combosort">
+				<div class="icon icon_combosort arrow-down"><i></i></div>
+				<div class="combosort__option">
+					<span id="combosort__value">SortIndex</span>
+					<ul class="combosort__drop">
+						<li>TimeCreated</li>
+						<li>TimeCreated</li>
+						<li>TimeCreated</li>
+					</ul>
+					<div class="combosort__btn"><i></i></div>
+				</div>
+			</div>
 		</div>
+		<!-- end toolbar -->
 		<!-- begin userstream -->
-		<div class="userstream js-masonry" data-masonry-options='{ "columnWidth": 202, "gutter": 12, "itemSelector": ".userstream__block" }'>
+		<div class="userstream js-masonry" data-masonry-options='{ "columnWidth": 202, "gutter": 12, "itemSelector": ".userstream__block" } '>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -111,38 +164,67 @@
 				<div class="userstream__description">
 					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__description">
+					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</div>
+				<div class="userstream__image">
+					<img src="img/stream-image.jpg" alt="">
+				</div>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
+				</div>
+			</div>
+			<div class="userstream__block">
+				<div class="userstream__btns">
+					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image-small.jpg" alt="">
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
+				</div>
+				<div class="userstream__image">
+					<img src="img/stream-image-small.jpg" alt="">
+				</div>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
+				</div>
+			</div>
+			<div class="userstream__block">
+				<div class="userstream__btns">
+					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -154,6 +236,8 @@
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -161,14 +245,15 @@
 				<div class="userstream__description">
 					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -176,14 +261,15 @@
 				<div class="userstream__description">
 					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -191,14 +277,15 @@
 				<div class="userstream__description">
 					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -206,14 +293,15 @@
 				<div class="userstream__description">
 					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 			<div class="userstream__block">
 				<div class="userstream__btns">
 					<button class="btn">Staple It</button>
+					<button class="btn">Link</button>
+					<button class="btn btn_edit">Edit</button>
 				</div>
 				<div class="userstream__image">
 					<img src="img/stream-image.jpg" alt="">
@@ -221,27 +309,12 @@
 				<div class="userstream__description">
 					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
 				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
-				</div>
-			</div>
-			<div class="userstream__block">
-				<div class="userstream__btns">
-					<button class="btn">Staple It</button>
-				</div>
-				<div class="userstream__image">
-					<img src="img/stream-image.jpg" alt="">
-				</div>
-				<div class="userstream__description">
-					This is description. This is description. This is description. This is description. This is descriptiotn. This is description. This is description. 
-				</div>
-				<div class="userstream__collection-name">
-					<img src="img/stream-user-icon.jpg" alt="">
-					<h3>2-line long Collection Name</h3>
+				<div class="userstream__collection-usersite">
+					<a href="#">http://userwebsite.com</a>
 				</div>
 			</div>
 		</div>
+		<!-- end userstream -->
 	</div>
 </div>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>

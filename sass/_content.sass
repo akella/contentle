@@ -5,21 +5,21 @@
 	min-width: 600px
 	min-width: 580px 
 	position: relative
-	width: 1880px
+	width: 1880px - 16px
 	&.not-logged
 		margin-top: 144px 
 	+r1880
-		width: 1666px - 14px
+		width: 1666px - 16px
 	+r1666
-		width: 1452px - 14px
+		width: 1452px - 16px
 	+r1452
-		width: 1238px - 14px
+		width: 1238px - 16px
 	+r1238
-		width: 1024px - 14px
+		width: 1024px - 16px
 	+r1024
-		width: 810px - 14px
+		width: 810px - 16px
 	+r810
-		width: 596px - 14px
+		width: 596px - 16px
 	
 .content-layout //wrap for tollbar and userstream
 	position: absolute
@@ -50,6 +50,8 @@
 		
 	.search__input
 		width: 157px
+		+r810
+			width: 130px 
 		
 	.privacy-icons
 		float: left
@@ -108,6 +110,20 @@
 			i
 				+s(privacy-privateh)
 
+	.icon_playerview
+		i
+			+s(playerview)
+		&:hover, &.is-active
+			i
+				+s(playerview-active)
+
+	.icon_docview
+		i
+			+s(docview)
+		&:hover, &.is-active
+			i
+				+s(docview-active)
+
 	.icon_listview
 		i
 			+s(listview)
@@ -124,17 +140,16 @@
 				+s(gridview-active)
 
 	.icon_combosort
+		float: left
 		margin-right: 3px
-		text-align: right 
+		text-align: right
 		i
 			+s(arrow-up)
-			position: relative
+			top: 1px
 			right: 6px 
 		&.arrow-down
 			i
 				+s(arrow-down)
-		+r810
-			display: none
 
 	.icon_refresh
 		margin-left: 18px 
@@ -152,6 +167,7 @@
 		height: 46px 
 		line-height: 46px
 		margin-right: 11px
+		+
 		+r810
 			display: none
 
@@ -185,6 +201,7 @@
 		border: 1px solid #969696
 		li
 			padding: 0 5px
+			cursor: pointer
 			&:hover
 				background: #d01c4a
 				color: #FFF 
@@ -248,6 +265,7 @@
 	
 	.btn
 		display: block
+		color: #4d4d4d 
 		padding: 5px 8px
 		margin-bottom: 3px 
 		font: bold 12px/1 Tahoma 
@@ -321,24 +339,24 @@
 			display: none
 	tr
 		td
-			border-bottom: 1px solid #c8c8c8		
+			border-bottom: 1px solid #c8c8c8	
 		&:hover
 			+g(#e5e4e4, #dadbda)
 			td:first-child:before
 				display: block
-			.collection-name, .date
+			.collection-name, .created, .edited
 				display: none
 			.stream__btns 
 				display: table-cell
 
 	.type
-		width: 31px //3.71702637%
-		max-width: 100% 
+		min-width: 31px //3.71702637%
+		width: 31px 
 		line-height: 31px
-		padding-right: 6px 
-		text-align: center  
+		padding-right: 6px  
 		position: relative
 		vertical-align: top
+		text-align: center
 		i
 			display: inline-block
 			position: relative
@@ -358,7 +376,7 @@
 			top: 3px
 			+s(icon-site)
 
-	.source
+	.website
 		width: 17.9856115% //150px
 		padding-right: 5px
 		font: bold 12px/31px Tahoma
@@ -381,7 +399,7 @@
 			position: relative
 			top: 3px
 	
-	.privacy_locked
+	.privacy_private
 		i
 			+s(icon-private)
 	
@@ -395,15 +413,21 @@
 		width: 20.383693% 
 		padding-right: 5px
 
-	.date
+	.edited
+		font: 12px/31px Tahoma
+		padding-right: 20px
+		width: 20.383693%
+		text-align: right
+
+	.created
 		font: 12px/31px Tahoma
 		padding-right: 10px
 		width: 7.91%
-		position: relative
+		text-align: right
 		
 .stream__btns
 	text-align: right
-	padding-right: 134px
+	padding-right: 11px
 	border: none 
 	font-size: 0
 	white-space: nowrap 
@@ -426,10 +450,107 @@
 	.btn_edit
 		padding: 0 20px
 		
-	.btn_link, .btn_edit
-		display: none
+	.btn_down
+		i
+			display: inline-block
+			+s(btn-down)
+		&:hover
+			i
+				+s(btn-downh)
+
+	.btn_up
+		i
+			display: inline-block
+			+s(btn-up)
+			position: relative
+			top: -2px
+		&:hover
+			i
+				+s(btn-uph)
  
-.stream__btns_privacy-locked
-	padding-right: 11px
-	.btn_link, .btn_edit
-		display: inline-block
+	&.privacy-public
+		padding-right: 134px
+		.btn_link, .btn_edit
+			display: none
+
+// BEGIN STREAM DOCVIEW
+.stream_docview
+	padding: 0
+	
+.stream__block
+	+clr
+	padding: 10px 12px
+	position: relative
+	border-top: 1px solid transparent
+	border-bottom: 1px solid #c8c8c8
+	&:hover
+		background: #dadbda
+		&:before
+			content: ""
+			width: 3px
+			height: 100%
+			background: #bd0000 
+			position: absolute
+			top: 0
+			left: 0
+		.stream__btns
+			display: block
+			position: absolute
+			top: 6px
+			right: 10px
+	
+	.stream__btns
+		padding-right: 0
+						
+	
+.stream__block-image
+	float: left
+	font-size: 0
+	text-align: center 
+	width: 24.390244% // 200px/820px
+	img
+		max-width: 100%
+		
+.stream__block-text
+	margin-left: 26.0975609% // 214px/820px
+	padding-bottom: 30px 
+	h3
+		font: bold 14px/16px Arial
+		margin-bottom: 10px 
+		
+	p
+		font-size: 13px
+		line-height: 16px
+		margin-bottom: 16px
+		&:last-of-type
+			margin-bottom: 0
+
+.stream__block-info
+	+clr  
+	position: absolute
+	bottom: 12px
+	right: 14px
+	left: 226px/844px*100%
+
+	.website
+		float: left
+		padding: 0
+		width: auto
+		line-height: 16px
+		
+	.created
+		float: right
+		padding: 0
+		width: auto
+		margin-left: 21px/820px *100%
+		line-height: 16px
+		pos
+		
+	.edited
+		float: right
+		padding: 0
+		width: auto
+		line-height: 16px
+		
+		
+		

@@ -8,7 +8,6 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-
 <!-- begin header  -->
 <div class="header">
 	<!-- begin header__left -->
@@ -23,7 +22,7 @@
 		<div class="header__rss">
 			<i class="header__rssicon"></i>
 		</div>
-		<div class="header__stream">
+		<div class="header__stream is-active">
 			<i class="header__streamicon"></i>
 		</div>
 	</div>
@@ -81,35 +80,39 @@
 <div class="content-wrap">
 	<!-- begin sidebar  -->
 	<div class="sidebar">
-		<!-- begin tags  -->
+		<!-- begin commands -->
 		<div class="sidebar__block">
-			<div class="title title_tags">
-				<i></i>Tags
+			<div class="user-pic">
+				<img src="img/sidebar-userpic.jpg" alt="">
 			</div>
-			<ul class="list list_tags">
-				<li><a href="#">the tag name</a></li>
-				<li><a href="#">the tag name</a></li>
-				<li><a class="is-selected" href="#">selected tag</a></li>
-				<li><a href="#">the tag name</a></li>
-				<li><a href="#">the tag name</a></li>
+			<div class="user-name">
+				User first and last name
+			</div>
+			<ul class="list list_commands">
+				<li><a href="#">Collections<span>7215</span></a></li>
+				<li><a class="is-selected" href="#">Fragments<span>38715</span></a></li>
+				<li><a href="#">Tags<span>11215</span></a></li>
+				<li><a href="#">Following<span>15</span></a></li>
+				<li><a href="#">Followers<span>55715</span></a></li>
+				<li><a href="#">Subscriptions<span>1</span></a></li>
 			</ul>
+			<a href="#" class="edit">Edit Account</a>
 		</div>
-		<!-- end tags -->
 		<!-- begin filters -->
 		<div class="sidebar__block">
-		<div class="title title_filters">
-			<i></i>Filters
+			<div class="title title_filters">
+				<i></i>Filters
+			</div>
+			<ul class="list list_filters">
+				<li><a href="#">text-filer</a></li>
+				<li><a href="#">text-filer</a></li>
+				<li><a class="is-selected" href="#">selected filer</a></li>
+				<li><a href="#">text-filer</a></li>
+				<li><a href="#">text-filer</a></li>
+			</ul>
 		</div>
-		<ul class="list list_filters">
-			<li><a href="#">text-filer</a></li>
-			<li><a href="#">text-filer</a></li>
-			<li><a class="is-selected" href="#">selected filer</a></li>
-			<li><a href="#">text-filer</a></li>
-			<li><a href="#">text-filer</a></li>
-		</ul>
-		</div>
-		<!-- end filters -->
 	</div>
+	<!-- end sidebar -->
 	<div class="content-layout">
 		<!-- begin toolbar -->
 		<div class="toolbar">
@@ -127,13 +130,18 @@
 					</ul>
 				</div>
 			</div>
+			<div class="privacy-icons">
+				<div class="icon icon_privacy-all"><i></i></div>
+				<div class="icon icon_privacy-public"><i></i></div>
+				<div class="icon icon_privacy-private is-active"><i></i></div>
+			</div>
 			<div class="icon icon_refresh"><i></i></div>
-			<div class="icon icon_gridview is-active"><i></i></div>
-			<div class="icon icon_listview"><i></i></div>
+			<div class="icon icon_gridview"><i></i></div>
+			<div class="icon icon_listview is-active"><i></i></div>
 			<div class="combosort">
-				<div class="icon icon_combosort arrow-down"><i></i></div>
+				<div class="icon icon_combosort"><i></i></div>
 				<div class="combosort__option">
-					<span id="combosort__value">TimeCreated</span>
+					<span id="combosort__value">Title</span>
 					<ul class="combosort__drop">
 						<li>TimeCreated</li>
 						<li>TimeCreated</li>
@@ -151,12 +159,14 @@
 					<td class="website"><img src="img/fav-imart.png" class="favicon">imart.ua</td>
 					<td class="privacy privacy_private"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 				<tr>
@@ -164,12 +174,14 @@
 					<td class="website"><img src="img/fav-fb.png" class="favicon">facebook.com</td>
 					<td class="privacy"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns privacy-public">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 				<tr>
@@ -177,12 +189,14 @@
 					<td class="website"><img src="img/fav-albomio.png" class="favicon">albomio.com</td>
 					<td class="privacy privacy_private"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 				<tr>
@@ -190,12 +204,14 @@
 					<td class="website"><img src="img/fav-trello.png" class="favicon">trello.com</td>
 					<td class="privacy privacy_private"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns privacy-public">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 				<tr>
@@ -203,12 +219,14 @@
 					<td class="website"></td>
 					<td class="privacy"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns privacy-public">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 				<tr>
@@ -216,12 +234,14 @@
 					<td class="website"><img src="img/fav-fb.png" class="favicon">facebook.com</td>
 					<td class="privacy"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns privacy-public">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 				<tr>
@@ -229,12 +249,14 @@
 					<td class="website"><img src="img/fav-imart.png" class="favicon">imart.ua</td>
 					<td class="privacy"><i></i></td>
 					<td class="title">Title of the fragment</td>
-					<td class="collection-name">Collection name</td>
+					<td class="edited">09.04.2014</td>
 					<td class="created">01.10.2013</td>
 					<td colspan=2 class="stream__btns privacy-public">
 						<button class="btn">Staple It</button>
 						<button class="btn btn_link">Link</button>
 						<button class="btn btn_edit">Edit</button>
+						<button class="btn btn_down"><i></i></button>
+						<button class="btn btn_up"><i></i></button>
 					</td>
 				</tr>
 			</table>
@@ -242,5 +264,6 @@
 	</div>
 </div>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
 </body>
 </html>
